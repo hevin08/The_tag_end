@@ -17,6 +17,7 @@ div{
 }
 body{
     font-family: 'DM Sans';
+    background-color: var(--dark-blue-color);
 }
 :root{
     --white-color: #ffffff;
@@ -73,4 +74,83 @@ body{
 .row{
     display: flex;
     flex-wrap: wrap;
+}
+.align-item-center{
+    align-items: center;
+}
+/* header */
+.header {
+    background-color: var(--dark-blue-color);
+    padding: 33px 133px; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1320px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 20px; 
+}
+
+.logo-text {
+    margin-left: 10px; 
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    color: var(--white-color);
+    font-weight: 500;
+    font-size: 14px; 
+    letter-spacing: 1.4px;
+    margin-left: 32px; 
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; 
+    left: 0;
+    right: 0;
+    height: 0px; 
+    background-color: var(--white-color); 
+    opacity: 0; 
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.nav-item:hover::after {
+    opacity: 1;
+    height: 2px; 
+}
+
+.btn {
+    padding: 20px 32px;
+    border: none;
+    border-radius: 80px; 
+    color: var(--white-color);
+    background-color: var(--blue-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px; 
+    letter-spacing: 1.6px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #021dbb;
 }
